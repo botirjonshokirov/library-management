@@ -22,8 +22,6 @@ The class uses an `ArrayList` to store the book details and provides a command-l
 
 It also uses the `LibraryValidator` class to validate user input.
 
-In addition, the class uses some `ANSI` escape codes to display colored output in the console.
-
 ## Service
 
 `Service` which implements the interface `ServiceInterface`.
