@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 
 
 public class Service implements ServiceInterface {
-    public static final String RED="\u001B[91m";
+    public static final String LIGHT_RED="\u001B[91m";
     public static final String RESET="\u001B[0m";
-    public static final String GREEN="\u001B[92m";
-    public static final String CYAN="\u001B[96m";
+    public static final String LIGHT_GREEN="\u001B[92m";
+    public static final String LIGHT_CYAN="\u001B[96m";
     LibraryValidator libraryValidator = new LibraryValidator();
     List<SingleBook> singleBooks = new ArrayList<>();
 
@@ -26,14 +26,14 @@ public class Service implements ServiceInterface {
         String year = libraryValidator.validatePublishYear();
         SingleBook singleBook = new SingleBook(book_id, author, title, year, "Available");
         singleBooks.add(singleBook);
-        System.out.println(GREEN + "Book added successfully!" + RESET);
+        System.out.println(LIGHT_GREEN + "Book added successfully!" + RESET);
     }
 
     @Override
     public void showAllBooks() {
         boolean flag=false;
         System.out.println("\n----------------------------------------------------------------------------------------------");
-        System.out.format(CYAN+"%s%20s%20s%20s%20s","| ID","| TITLE","| AUTHOR","| PUBLISH YEAR","| STATUS"+RESET);
+        System.out.format(LIGHT_CYAN+"%s%20s%20s%20s%20s","| ID","| TITLE","| AUTHOR","| PUBLISH YEAR","| STATUS"+RESET);
         System.out.println("\n----------------------------------------------------------------------------------------------");
 
         for (SingleBook singleBook : singleBooks){
@@ -49,7 +49,7 @@ public class Service implements ServiceInterface {
     public void showAllAvailableBooks() {
         boolean flag=false;
         System.out.println("\n----------------------------------------------------------------------------------------------");
-        System.out.format(CYAN+"%s%20s%20s%20s%20s","| ID","| TITLE","| AUTHOR","| PUBLISH YEAR","| STATUS"+RESET);
+        System.out.format(LIGHT_CYAN+"%s%20s%20s%20s%20s","| ID","| TITLE","| AUTHOR","| PUBLISH YEAR","| STATUS"+RESET);
         System.out.println("\n----------------------------------------------------------------------------------------------");
 
         if(singleBooks.size()>0){
@@ -62,11 +62,11 @@ public class Service implements ServiceInterface {
             }
         }
         else{
-            System.out.println(RED+"No Books Available in the library, Sorry for that :("+RESET);
+            System.out.println(LIGHT_RED+"No Books Available in the library, Sorry for that :("+RESET);
         }
         System.out.println("\n----------------------------------------------------------------------------------------------");
         if(flag==false)
-            System.out.println(RED+"There are no books with status Available"+RESET);
+            System.out.println(LIGHT_RED+"There are no books with status Available"+RESET);
 
     }
 
@@ -78,13 +78,13 @@ public class Service implements ServiceInterface {
         for (SingleBook singleBook : singleBooks){
             if (singleBook.getId().equals(book_id) && singleBook.getStatus().equals("Available")){
                 flag=true;
-                System.out.println(GREEN+"Book Borrowed Successfully!!! " + RESET);
+                System.out.println(LIGHT_GREEN+"Book Borrowed Successfully!!! " + RESET);
                 singleBook.setStatus("Not Available!!!");
                 System.out.println("Borrowed Book Details: "+ singleBook);
             }
         }
         if (flag == false){
-            System.out.println(RED+"This book is not available to borrow! :("+RESET);
+            System.out.println(LIGHT_RED+"This book is not available to borrow! :("+RESET);
         }
     }
 
@@ -96,13 +96,13 @@ public class Service implements ServiceInterface {
         for(SingleBook singleBook : singleBooks){
             if(singleBook.getId().equals(book_id) && singleBook.getStatus().equals("Not Available")){
                 flag=true;
-                System.out.println(GREEN+"Book Returned Successfully !!!"+RESET);
+                System.out.println(LIGHT_GREEN+"Book Returned Successfully !!!"+RESET);
                 singleBook.setStatus("Available");
                 System.out.println("Returned Book Details: "+ singleBook);
             }
         }
         if(flag==false){
-            System.out.println(RED + "We can not return this book" + RESET);
+            System.out.println(LIGHT_RED + "We can not return this book" + RESET);
         }
     }
 }
