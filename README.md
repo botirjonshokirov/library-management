@@ -22,16 +22,10 @@ The class uses an `ArrayList` to store the book details and provides a command-l
 
 It also uses the `LibraryValidator` class to validate user input.
 
-In addition, the class uses some `ANSI` escape codes to display colored output in the console.
-
-It defines four static final strings `RED`, `RESET`, `GREEN`, and `CYAN` to format the console output.
-
 ## Service
 
 `Service` which implements the interface `ServiceInterface`.
 The class has the following properties and methods:
-
-- `RED`, `RESET`, `GREEN`, and `CYAN` are constants defined as strings with `ANSI` color codes, used for console output formatting.
 
 - `libraryValidator` is an instance of the LibraryValidator class used to validate book details.
 - `singleBooks` is an instance of the List class used to store instances of SingleBook objects.
