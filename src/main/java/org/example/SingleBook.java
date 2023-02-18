@@ -1,20 +1,13 @@
 package org.example;
 
-public class SingelBook {
-    // Book details
+public class SingleBook {
     private String id;
     private String title;
     private String author;
     private String published_Year;
     private String status;
 
-
-    // Default Constructors
-    public SingelBook(){
-    }
-
-    // parameter based constructor
-    public SingelBook(String id, String title, String author, String published_Year, String status){
+    public SingleBook(String id, String title, String author, String published_Year, String status){
         this.id = id;
         this.title = title;
         this.author = author;
@@ -22,7 +15,6 @@ public class SingelBook {
         this.status = status;
     }
 
-    // getter and setters for each field
     public String getId(){
         return id;
     }
@@ -58,7 +50,6 @@ public class SingelBook {
         this.status = status;
     }
 
-    // toString method
     @Override
     public String toString(){
         return  "Book{" +

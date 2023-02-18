@@ -10,14 +10,16 @@ public class Main {
 
 
         do{
-            System.out.println("Welcome to Book Management Application!");
+            System.out.println("Greetings and welcome to the Book Management Application!\n"
+);
+            System.out.println("The following options are available in this program: \n");
             System.out.println(
-                    "1. Add Book\n" +
-                    "2. Show all Books\n"+
-                    "3. Show Available Books\n" +
-                    "4. Borrow Book\n" +
-                    "5. Return Book\n" +
-                    "6. Exit\n"
+                    "1. Add a book (If no books exist, choose this option)\n" +
+                    "2. Show all books\n"+
+                    "3. Show available books\n" +
+                    "4. Borrow a book\n" +
+                    "5. Return a book\n" +
+                    "6. Exit or quit the program.\n"
             );
 
             System.out.println("Enter Your Choice! ");
@@ -40,12 +42,12 @@ public class Main {
                     service.returnBook();
                     break;
                 case 6:
-                    System.out.println("Thank you for using Our Library!!!");
+                    System.out.println("We appreciate your use of our library and thank you for using our services.");
                     System.out.println("Creator: Botirjon Shokirov");
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Please Enter Valid Choice!!!");
+                    System.out.println("The input you provided is invalid. Please enter a valid choice!!!");
             }
         }
         while (true);
