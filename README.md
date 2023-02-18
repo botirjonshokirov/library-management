@@ -46,6 +46,18 @@ It provides two constructors for creating instances of this class - a default co
 
 Overall, this code provides a simple model for representing a book with its relevant details. It follows good `OOP` principles of encapsulation and abstraction by using private fields and providing `getter` and `setter` methods to access them. 
 
+## Useful
+
+* Code will checks ids existance
+
+here is first book:
+
+![picture alt](https://github.com/botirjonshokirov/library-management/blob/main/src/test-images/first-book.png)
+
+and here we are creating a book with the same ID:
+
+![picture alt](https://github.com/botirjonshokirov/library-management/blob/main/src/test-images/id-exist.png)
+
 ## Conclusion
 
 This library management application have `basic functionality` and could be `useful` for small libraries or personal book collections.
